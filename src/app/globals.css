@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  /* Main requested color palette */
+  --background: #BF4F51;      /* Warm crimson/terracotta background */
+  --foreground: #F5F5F0;      /* Crisp off-white */
+
+  /* Surface and container accents harmonized with #BF4F51 */
+  --card: #A83E40;
+  --card-border: rgba(255, 255, 255, 0.16);
+  --border: rgba(255, 255, 255, 0.2);
+
+  /* Button tokens: Off-white background with dark black/grey text */
+  --btn-bg: #F5F5F0;          /* Off-white */
+  --btn-bg-hover: #FFFFFF;    /* Pure white */
+  --btn-text: #171A21;        /* Dark grey / black text */
+  --btn-text-muted: #4A4E58;  /* Medium grey */
+
+  --muted: rgba(245, 245, 240, 0.78);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-text: var(--btn-text);
+  --color-muted: var(--muted);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
