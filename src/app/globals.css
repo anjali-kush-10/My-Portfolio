@@ -25,24 +25,24 @@
 
 [data-theme="dark"],
 .dark {
-  /* Midnight Dark theme */
-  --background: #0F1117;
+  /* Royal Navy Blue Dark theme (#002366) */
+  --background: #002366;
   --foreground: #F5F5F0;
-  --header-bg: #0F1117;
-  --header-scrolled-bg: rgba(15, 17, 23, 0.94);
-  --mobile-menu-bg: rgba(18, 22, 31, 0.98);
+  --header-bg: #002366;
+  --header-scrolled-bg: rgba(0, 35, 102, 0.95);
+  --mobile-menu-bg: rgba(0, 26, 77, 0.98);
 
-  --card: #161B26;
-  --card-border: rgba(255, 255, 255, 0.1);
-  --border: rgba(255, 255, 255, 0.15);
+  --card: #001B4E;
+  --card-border: rgba(255, 255, 255, 0.16);
+  --border: rgba(255, 255, 255, 0.2);
 
   --btn-bg: #F5F5F0;
   --btn-bg-hover: #FFFFFF;
   --btn-text: #171A21;
   --btn-text-muted: #4A4E58;
 
-  --muted: rgba(245, 245, 240, 0.7);
-  --glow-color: rgba(191, 79, 81, 0.08);
+  --muted: rgba(245, 245, 240, 0.78);
+  --glow-color: rgba(64, 150, 255, 0.12);
 }
 
 @theme inline {

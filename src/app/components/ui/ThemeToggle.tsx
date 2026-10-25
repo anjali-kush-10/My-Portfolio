@@ -41,12 +41,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
         title={
           isDark
             ? "Switch to Warm Crimson Theme"
-            : "Switch to Midnight Dark Theme"
+            : "Switch to Royal Navy Dark Theme"
         }
         aria-label={
           isDark
-            ? "Currently in Midnight Dark mode. Click to switch to Warm Crimson mode"
-            : "Currently in Warm Crimson mode. Click to switch to Midnight Dark mode"
+            ? "Currently in Royal Navy Dark mode. Click to switch to Warm Crimson mode"
+            : "Currently in Warm Crimson mode. Click to switch to Royal Navy Dark mode"
         }
         className="relative inline-flex items-center h-9 w-[72px] rounded-full p-1 bg-black/25 hover:bg-black/35 border border-white/20 hover:border-white/40 backdrop-blur-md transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95 group cursor-pointer shadow-inner select-none"
       >
@@ -54,7 +54,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
         <span
           className={`absolute top-1 bottom-1 w-7 rounded-full transition-all duration-300 ease-out shadow-md flex items-center justify-center ${
             isDark
-              ? "left-[37px] bg-[#1E2433] border border-white/20 shadow-indigo-950/50"
+              ? "left-[37px] bg-[#001B4E] border border-white/20 shadow-blue-950/50"
               : "left-1 bg-[#F5F5F0] border border-black/10 shadow-black/20"
           }`}
         />
@@ -101,7 +101,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
               ? "text-indigo-200 scale-105 drop-shadow-[0_0_6px_rgba(199,210,254,0.5)]"
               : "text-white/40 hover:text-white/80"
           }`}
-          title="Midnight Dark"
+          title="Royal Navy Dark"
         >
           <svg
             className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-12"
