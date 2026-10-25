@@ -14,7 +14,7 @@ export const Hero = () => {
                     <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center text-left">
                         {/* Off-White Main Heading */}
                         <h3 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#F5F5F0] leading-[1.1] mb-6">
-                            Hi, I&apos;m John Doe
+                            Hi, I&apos;m Anjali Kushwah
                         </h3>
 
                         {/* Bio / Description */}

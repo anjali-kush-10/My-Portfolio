@@ -7,7 +7,7 @@ import Contact from "./components/sections/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#BF4F51] text-[#F5F5F0]">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
       <Header />
       <main>
         <Hero />

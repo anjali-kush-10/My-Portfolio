@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ThemeToggle from "../ui/ThemeToggle";
 
 interface NavItem {
     label: string;
@@ -68,8 +69,8 @@ export const Header = () => {
     return (
         <header
             className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
-                ? "bg-[#BF4F51]/95 backdrop-blur-md border-b border-white/20 shadow-lg shadow-black/15 py-3"
-                : "bg-[#BF4F51] border-b border-white/15 py-4 md:py-5"
+                ? "bg-[var(--header-scrolled-bg)] backdrop-blur-md border-b border-white/20 shadow-lg shadow-black/15 py-3"
+                : "bg-[var(--header-bg)] border-b border-white/15 py-4 md:py-5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,13 +87,13 @@ export const Header = () => {
                     >
                         {/* Monogram Badge */}
                         <div className="w-10 h-10 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center text-[#F5F5F0] font-bold text-lg tracking-wider shadow-inner group-hover:bg-white/25 group-hover:border-white/40 transition-all duration-300">
-                            J
+                            AK
                         </div>
 
                         {/* Brand Title & Status Tag */}
                         <div className="flex flex-col">
                             <span className="text-lg font-bold tracking-tight text-[#F5F5F0] group-hover:text-white transition-colors">
-                                John<span className="text-white/60">...</span>
+                                Anjali<span className="text-white/60">...</span>
                             </span>
                         </div>
                     </a>
@@ -120,8 +121,11 @@ export const Header = () => {
                         })}
                     </nav>
 
-                    {/* Desktop Right Action: Off-White Button with Dark Text */}
+                    {/* Desktop Right Action: Theme Toggle (Sun & Moon) + Off-White Let's Talk Button */}
                     <div className="hidden md:flex items-center gap-3">
+                        {/* Moon & Sun Theme Toggle */}
+                        <ThemeToggle />
+
                         <a
                             href="#contact"
                             onClick={(e) => handleLinkClick(e, "#contact")}
@@ -144,8 +148,9 @@ export const Header = () => {
                         </a>
                     </div>
 
-                    {/* Mobile Menu Hamburger Button */}
-                    <div className="flex md:hidden items-center">
+                    {/* Mobile Menu Actions: Theme Toggle + Hamburger Button */}
+                    <div className="flex md:hidden items-center gap-2">
+                        <ThemeToggle />
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -189,7 +194,7 @@ export const Header = () => {
 
             {/* Mobile Dropdown Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden border-t border-white/20 bg-[#A93E40]/98 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-2 duration-200">
+                <div className="md:hidden border-t border-white/20 bg-[var(--mobile-menu-bg)] backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-2 duration-200">
                     <nav
                         aria-label="Mobile Navigation"
                         className="flex flex-col gap-1.5 pt-2"
@@ -212,7 +217,13 @@ export const Header = () => {
                             );
                         })}
 
-                        <div className="pt-3 mt-2 border-t border-white/15">
+                        {/* Mobile Theme Switch Row */}
+                        <div className="flex items-center justify-between px-4 py-3 my-1 rounded-xl bg-black/20 border border-white/10 text-sm font-medium text-[#F5F5F0]">
+                            <span className="text-xs uppercase tracking-wider text-[#F5F5F0]/80 font-bold">Theme</span>
+                            <ThemeToggle showLabels />
+                        </div>
+
+                        <div className="pt-2 mt-1 border-t border-white/15">
                             <a
                                 href="#contact"
                                 onClick={(e) => handleLinkClick(e, "#contact")}
